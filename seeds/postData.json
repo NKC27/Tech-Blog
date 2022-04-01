@@ -1,0 +1,20 @@
+[
+    {
+      "title": "Title for Seed Here",
+      "text_content": "Here is some text content for the seed here.",
+      "user_id": 1,
+      "date_created": "29/3/2022"
+    },
+    {
+      "title": "Title for Seed Here 2",
+      "text_content": "Here is some text content for the seed here 2.",
+      "user_id": 2,
+      "date_created": "29/3/2022"
+    },
+    {
+      "title": "Title for Seed Here 3",
+      "text_content": "Here is some text content for the seed here 3.",
+      "user_id": 3,
+      "date_created": "29/3/2022"
+    }
+  ]

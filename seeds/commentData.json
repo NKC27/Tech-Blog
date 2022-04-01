@@ -1,0 +1,17 @@
+[
+    {
+      "user_id": 1,
+      "post_id": 1,
+      "content": "This is some sample text for the comment section"
+    },
+    {
+      "user_id": 2,
+      "post_id": 2,
+      "content": "This is some more sample text for the comment section 2"
+    },
+    {
+      "user_id": 3,
+      "post_id": 3,
+      "content": "This is some more sample text for the comment section 3"
+    }
+  ]
