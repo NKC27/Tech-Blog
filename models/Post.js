@@ -10,7 +10,7 @@ Post.init({
         primaryKey: true,
         autoIncrement: true,
     },
-    created: {
+    date_created: {
         type: DataTypes.DATE,
         allowNull:false,
         defaultValue: DataTypes.NOW,
