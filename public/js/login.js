@@ -5,7 +5,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/user/login', {
+        const response = await fetch('/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
@@ -21,13 +21,14 @@ async function loginFormHandler(event) {
 
 const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+    console.log('Sign up triggered')
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-  
+    console.log(username, email, password)
     if (username && email && password) {
-      const response = await fetch('/api/users', {
+      console.log("Making request....")
+      const response = await fetch('/api/users/signup', {
         method: 'POST',
         body: JSON.stringify({ username, email, password }),
         headers: { 'Content-Type': 'application/json' },
