@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
         }));
         console.log('Posts Homepage', posts)
         res.render('homepage', {
-            ...posts,
+            posts,
             logged_in: req.session.logged_in,
         });
     } catch (err) {
@@ -44,7 +44,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
         });
 
         res.render('post', {
-            ...post,
+            post,
             logged_in: req.session.logged_in,
         });
     } catch (err) {
@@ -53,7 +53,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    // If already logged in, redirect to the homepage
+    // If already logged in, redirect  the homepage
     if (req.session.logged_in) {
         res.redirect('/');
         return;
