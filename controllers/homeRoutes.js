@@ -1,9 +1,5 @@
 const router = require('express').Router();
-const {
-    Post,
-    Comment,
-    User
-} = require('../models');
+const { Post, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // All posts
@@ -21,7 +17,7 @@ router.get('/', async (req, res) => {
         }));
         console.log('Posts Homepage', posts)
         res.render('homepage', {
-            posts,
+            ...posts,
             logged_in: req.session.logged_in,
         });
     } catch (err) {
