@@ -2,6 +2,22 @@ const router = require('express').Router();
 const { Comment, Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
+// All 
+router.get("/", async (req, res) => {
+  try {
+    //   Find all 
+    const commentData = await Comment.findAll({
+
+      include: [User],
+    });
+
+    const comments = commentData.map((comment) => comment.get({ plain: true }));
+    res.json(comments);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 // Post
 router.post('/', withAuth, async (req, res) => {
   try {
