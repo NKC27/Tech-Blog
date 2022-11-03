@@ -24,4 +24,4 @@ We were set the task to build a CMS-style blog site similar to a Wordpress site.
 
 ## Heroku Link
 
-https://tech-blog-nkc.herokuapp.com/
+https://nkc27-tech-blog.herokuapp.com/
